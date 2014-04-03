@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+ 	<link rel="stylesheet" type="text/css" href="css/admin.css">
+  	<title>PhoneGap</title>
+  	<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+ </head>
+ <body>
+ 
+ <ul id="nav">
+ <li><a href="index.html">Home</a></li>
+    <li><a class="hsubs" href="#">Administration</a>
+        <ul class="subs">
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Add picto</a></li>
+            <li><a href="#">Galerie picto</a></li>
+            <li><a href="#">Planning</a></li>
+            <li><a href="#">Game</a></li>
+        </ul>
+    </li>
+    <div id="lavalamp"></div>
+</ul>
+
+<table style="width:100%;" id="tbl">
+<tr>
+	<td>Nom:</td>
+	<td>
+		<input id="txtNom" type="text" class="c1"/>
+	</td>
+</tr>
+<tr>
+	<td>Prenom:</td>
+	<td>
+		<input id="txtPrenom" type="text" class="c1"/>
+	</td>
+</tr>
+<tr>
+	<td>Age:</td>
+	<td>
+		<input id="">
+	</td>
+</tr>
+            
+</html>
+ </body>

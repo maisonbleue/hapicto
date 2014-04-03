@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+ 	<link rel="stylesheet" type="text/css" href="css/admin.css">
+  	<title>PhoneGap</title>
+  	<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+ </head>
+ <body>
+ 
+ <ul id="nav">
+ <li><a href="index.html">Home</a></li>
+    <li><a class="hsubs" href="#">Administration</a>
+        <ul class="subs">
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Add picto</a></li>
+            <li><a href="#">Galerie picto</a></li>
+            <li><a href="#">Planning</a></li>
+            <li><a href="#">Game</a></li>
+        </ul>
+    </li>
+    <div id="lavalamp"></div>
+</ul>
+
+
+<form action="" method="post">
+	<label>Nom : </label>
+	<input type="text" id="nom"><br>
+	<label>Prenom : </label>
+	<input type="text" id="prenom"><br>
+	<input type="button" value="save" onclick="save();">
+	<input type="button" value="show" onclick="show();">
+</form>
+<p id="affTables"></p>
+<script type="text/javascript" charset="utf-8">
+function save(){
+window.localStorage.setItem("Nom", document.getElementById("nom").value);
+window.localStorage.setItem("Prenom", document.getElementById("prenom").value);
+}
+function show(){
+var reNom = window.localStorage.getItem("Nom", reNom);
+var rePrenom = window.localStorage.getItem("Prenom", rePrenom);
+document.getElementById("affTables").innerHTML= rePrenom + " " + reNom;
+}
+</script>
+</body>
+</html>

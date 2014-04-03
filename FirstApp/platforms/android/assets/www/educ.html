@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>PhoneGap</title>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <style type="text/css">
+  img.highlight{background:yellow;}
+  </style>
+ </head>
+ <body>
+    <h1>Education pannel</h1>
+ <script>var globalVar = 0;</script>
+    <a href="javascript:void(0)" onclick="myVerif(1);">
+    <img src="img/logo.png" /></a>
+        <a href="javascript:void(0)" onclick="myVerif(0)">
+    <img src="img/logo.png" /></a>
+        <a href="javascript:void(0)" onclick="myVerif(0);">
+    <img src="img/logo.png" /></a><br>
+<button onclick="checkResult();" >Reponse</button>
+<p id="affRes"></p>
+<script type="text/javascript">
+function myVerif(x){
+	globalVar = x;
+	document.getElementById("affRes").innerHTML="";
+}
+function checkResult() {
+if (globalVar == 1)
+	document.getElementById("affRes").innerHTML="Bonne reponse";
+else
+	document.getElementById("affRes").innerHTML="Mauvaise reponse";
+}
+</script>
+<script>
+$("img").click(function() {
+ 	$("img").removeClass("highlight");
+	$(this).toggleClass("highlight");
+});
+</script>
+ </body>
+</html>
